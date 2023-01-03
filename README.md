@@ -1,5 +1,5 @@
 # Graph-Neural-Network-solver-for-Power-Flow
-The code from case24try. my is the computation with Matpower of the Power flow equations. This code outputs the features of each node for a 24-Bus system . We generate the features for 5000 different graphs of 24- nodes for each hour. 
+The code from case24try.m is the computation with Matpower of the Power flow equations. This code outputs the features of each node for a 24-Bus system . We generate the features for 5000 different graphs of 24- nodes for each hour. 
 To run the code case24try.m you need : 
 - Download Matpower
 - A file called "System.m" that is the CASE24_IEEE_RTS  Power flow data for the IEEE RELIABILITY TEST SYSTEM.
@@ -14,13 +14,14 @@ The code will output:
 The code presented in mainGNN.py and Norm.py are used for the computation of the Power Flow equations with a GNN. 
 Following procedure to run the code: 
 - 1. Run Norm py (Normalization of Dataset)
-  - Files needed: 
+  - Input: Files needed: 
     - Dataset generated from case24try.m 
   - Output : 
-    -Normalized Dataset saved in directory
+    - Normalized Dataset saved in directory
 - 2. Run mainGNN.py 
-  - Files Needed
+  - Input : Files Needed
     - Edge index file from case24try.m
+    - Normalized Dataset saved in directory from Norm.py
   - Output : 
     - Saved GNN model with learned parameters
     - Train loss and validation loss as Excel files
