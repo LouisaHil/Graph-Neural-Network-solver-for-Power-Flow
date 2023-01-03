@@ -13,7 +13,7 @@ The code will output:
 
 The code presented in mainGNN.py and Norm.py are used for the computation of the Power Flow equations with a GNN. 
 Following procedure to run the code: 
-- 1. Run Norm py (Normalization of Dataset)
+- 1. Run Norm py (uncommnent the Normalization section)
   - Input: Files needed: 
     - Dataset generated from case24try.m 
   - Output : 
@@ -29,5 +29,22 @@ Following procedure to run the code:
     - Test loss
     - Time computed for predictions
     - Denormalized predictions saved in Excel file
-    
-   
+If you choose to run it on the Euler Cluster you need to upload : 
+- Python main files : mainGNN.py and Norm.py
+- Dataset generated form case24try.m 
+- Edge Index list  generated from case24try.m
+- Dataset generated from Norm.py (the normalization of the dataset does not need to be run on the cluster) 
+- Install pytorch, pytorch geometric, excel 
+  - following commands can be used: 
+    - $ env2lmod
+    - $ module load gcc/6.3.0 python_gpu/3.8.5
+    - $ pip install pyg-lib torch-scatter torch-sparse -f https://data.pyg.org/whl/torch-1.12.0+cu113.html  
+    - $ module load hdf5/1.10.1
+    - $ pip install --userb ^C
+    - $ pip install --user torch-geometric 
+    - $ pip install xlrd==1.2.0
+  -  run  mainGNN.py on the cluster by assigning it to the same node you ran the matlab code on : 
+    -  e.g $ sbatch --constraint=EPYC_7742 --mem-per-cpu=1024 --wrap "python mainGNN.py"
+
+# Results
+Furthermore, we have attached the resulting files from the matlab and the python codes in a seperate folder "Results". From mainGNN.py we were able to generate a lits of predicted output values and a list of the real output values. These results are useful in determining the accuracy of our GNN model for Power flow equations. 
