@@ -49,9 +49,14 @@ If you choose to run it on the Euler Cluster you need to upload :
 # Results
 Furthermore, we have attached the resulting files from the matlab and the python codes in a seperate folder "Results". From mainGNN.py we were able to generate a lits of predicted output values and a list of the real output values. These results are useful in determining the accuracy of our GNN model for Power flow equations. 
 Lexicon : 
-- BIGDataset: excel dataset generated from case24try.m
+- BIGcasenew24AC_TRYnonlabeled.xlsx: excel dataset generated from case24try.m
 - EdgeIndex: excel list from case24try.m
-- converted Dataset: excel dataset nomralized from Norm.py
+- BIGconverted-to-excel: excel dataset nomralized from Norm.py
 - 300epochGNN_ydenorm_predicted : predicted output from GNN
 - 300epochGNN_ydenorm_real: real output
 - 3000epochtrainloss: excel list with train loss for each epoch
+
+# Reproduce results
+If you would like to reproduce the results, you need to carefully uncomment/comment the necessary lines too obtain the wanted results. 
+In the case, that you would like to output the computation time of the GNN, you need to uncomment the denormalization and decide for how many datapoints you would like to predict the values. 
+
