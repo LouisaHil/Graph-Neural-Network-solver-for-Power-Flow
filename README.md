@@ -51,7 +51,7 @@ Furthermore, we have attached the resulting files from the matlab and the python
 Lexicon : 
 - BIGcasenew24AC_TRYnonlabeled.xlsx: excel dataset generated from case24try.m
 - EdgeIndex: excel list from case24try.m
-- BIGconverted-to-excel: excel dataset nomralized from Norm.py
+- BIGconverted-to-excel: excel dataset normalized from Norm.py
 - 300epochGNN_ydenorm_predicted : predicted output from GNN
 - 300epochGNN_ydenorm_real: real output
 - 3000epochtrainloss: excel list with train loss for each epoch
