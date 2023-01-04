@@ -44,7 +44,7 @@ If you choose to run it on the Euler Cluster you need to upload :
     - $ pip install --user torch-geometric 
     - $ pip install xlrd==1.2.0
   -  run  mainGNN.py on the cluster by assigning it to the same node you ran the matlab code on : 
-    -  e.g $ sbatch --constraint=EPYC_7742 --mem-per-cpu=1024 --wrap "python mainGNN.py"
+    -  e.g $ sbatch --constraint=EPYC_7742 --mem-per-cpu=5000 --wrap "python mainGNN.py"
 
 # Results
 Furthermore, we have attached the resulting files from the matlab and the python codes in a seperate folder "Results". From mainGNN.py we were able to generate a lits of predicted output values and a list of the real output values. These results are useful in determining the accuracy of our GNN model for Power flow equations. 
